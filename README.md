@@ -3,6 +3,7 @@
 When does Switzerland turn to nature? Twenty-one nature words, searched in German, French, Italian, mark the Swiss year: from wild garlic in March to chestnuts in October, with morels for Christmas. The wolf is searched all year.
 
 **Live site: https://datamat.github.io/nature-clock/**
+
 Available in German, English, French, Italian: add `#de`, `#en`, `#fr` or `#it` to the address.
 
 [![The nature clock: one ring per word, from wild garlic in March to morels in December](images/dial.png)](https://datamat.github.io/nature-clock/)
