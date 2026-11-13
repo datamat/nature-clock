@@ -5,6 +5,8 @@ When does Switzerland turn to nature? Twenty-one nature words, searched in Germa
 **Live site: https://datamat.github.io/nature-clock/**
 Available in German, English, French, Italian: add `#de`, `#en`, `#fr` or `#it` to the address.
 
+[![The nature clock: one ring per word, from wild garlic in March to morels in December](images/dial.png)](https://datamat.github.io/nature-clock/)
+
 ## What the site shows
 
 - **The dial.** One ring per word, ordered from the inside out by peak date. Colour strength shows how far each week rises above the word's quietest week.
@@ -12,6 +14,10 @@ Available in German, English, French, Italian: add `#de`, `#en`, `#fr` or `#it` 
 - **The year in searches.** All words as curves, read from top to bottom like a calendar.
 - **Season shift.** The trend of each season's centre since 2004, in days per decade.
 - **Signal size.** Average search volume of all 61 candidate words.
+
+| Each word since 2004 | The year in searches | Is the season shifting? |
+|---|---|---|
+| ![Mushrooms, monthly since 2004](images/word.png) | ![All words as curves through the year](images/year.png) | ![Season shift in days per decade](images/shift.png) |
 
 ## Data
 
@@ -53,4 +59,4 @@ Google limits how fast it answers. If collecting fails with "429", try again lat
 
 ## Author
 
-Matthias Häni. Personal project. Data: Google Trends.
+Matthias Häni. Personal project. Data: Google Trends. Code written with help from Claude (Anthropic).

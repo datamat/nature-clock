@@ -63,20 +63,34 @@ def site_url(repo_url, folder):
     return base if folder == "." else base + folder.strip("/") + "/"
 
 
+def mirror(src, dst):
+    """Copy src over dst, then remove files in dst that src no longer has.
+    No folder is deleted as a whole: OneDrive often locks folders (WinError 5)."""
+    shutil.copytree(src, dst, ignore=shutil.ignore_patterns(*SKIP), dirs_exist_ok=True)
+    for f in dst.rglob("*"):
+        if f.is_file() and not (src / f.relative_to(dst)).exists():
+            try:
+                f.chmod(0o666)
+                f.unlink()
+            except OSError:
+                pass
+
+
 def copy_project(repo):
     """Mirror README plus the project folders into the repository."""
     readme = ROOT / "README.md"
     if readme.exists():
         shutil.copyfile(readme, repo / "README.md")
     dest = repo / "project"
-    if dest.exists():
-        shutil.rmtree(dest)
     for part in PROJECT_PARTS:
         src = ROOT / part
         if src.exists():
-            shutil.copytree(src, dest / part, ignore=shutil.ignore_patterns(*SKIP))
+            mirror(src, dest / part)
     for bat in ROOT.glob("*.bat"):
         shutil.copyfile(bat, dest / bat.name)
+    images = ROOT / "images"
+    if images.exists():
+        shutil.copytree(images, repo / "images", dirs_exist_ok=True)
 
 
 def publish(name, repo_url, folder):
@@ -91,6 +105,8 @@ def publish(name, repo_url, folder):
     target = repo / folder / "index.html"
     target.parent.mkdir(parents=True, exist_ok=True)
     shutil.copyfile(SITE, target)
+    # serve the files as they are, without GitHub's Jekyll processing
+    (repo / ".nojekyll").touch()
     if folder == ".":
         copy_project(repo)
     git("add", "-A", cwd=repo)

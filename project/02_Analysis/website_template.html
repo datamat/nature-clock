@@ -121,7 +121,7 @@ en: {title: "Switzerland’s nature clock",
        "<b>Yearly cycle.</b> Mean of each calendar week over five years, smoothed over three weeks. Peak = highest week. In season = weeks above half the peak. Yearly rhythm = (highest − lowest) / highest.",
        "<b>Shift.</b> For each year: the search-weighted mean date across the season’s months (half-peak months plus one on each side). Trend: Theil–Sen slope with its 95 % range. A year counts only if every month of the season has measurable searches; a trend needs ten such years. Words peaking in December or January, or without a clear season, are left out.",
        "<b>Limits.</b> Searches measure attention, not nature itself. News can create spikes. Google changed its data collection in 2011, 2016, 2022. Monthly steps make the shift coarse: a few days per decade is at the edge of what the data can show. A shift in searches can also come from new habits (e.g. buying blueberry bushes in spring). With twenty words tested, one or two may pass the 95 % test by chance."],
-  foot: (d, b) => `Data: Google Trends, region Switzerland, pulled ${d}. Analysis: Matthias Häni, ${b}.`},
+  foot: (d, b) => `Data: Google Trends, region Switzerland, pulled ${d}. Analysis: Matthias Häni, ${b}. Code written with help from Claude (Anthropic).`},
 
 de: {title: "Die Naturuhr der Schweiz",
   lede: n => `Wann wendet sich die Schweiz der Natur zu? ${n} Wörter, gesucht auf Deutsch, Französisch, Italienisch, zeichnen das Schweizer Jahr nach: vom Bärlauch im März bis zu den Kastanien im Oktober, mit Morcheln zu Weihnachten. Der Wolf wird das ganze Jahr gesucht.`,
@@ -149,7 +149,7 @@ de: {title: "Die Naturuhr der Schweiz",
        "<b>Jahreszyklus.</b> Mittel jeder Kalenderwoche über fünf Jahre, über drei Wochen geglättet. Spitze = höchste Woche. Saison = Wochen über der halben Spitze. Jahresrhythmus = (höchster − tiefster Wert) / höchster Wert.",
        "<b>Verschiebung.</b> Pro Jahr: das suchgewichtete mittlere Datum über die Monate der Saison (Monate über der halben Spitze plus je einer davor und danach). Trend: Theil-Sen-Steigung mit 95-%-Bereich. Ein Jahr zählt nur, wenn jeder Monat der Saison messbare Suchanfragen hat; ein Trend braucht zehn solche Jahre. Wörter mit Spitze im Dezember oder Januar oder ohne klare Saison fallen weg.",
        "<b>Grenzen.</b> Suchanfragen messen Aufmerksamkeit, nicht die Natur selbst. Nachrichten können Spitzen erzeugen. Google hat die Datenerhebung 2011, 2016, 2022 geändert. Monatsschritte machen die Verschiebung grob: einige Tage pro Jahrzehnt liegen an der Grenze dessen, was die Daten zeigen können. Eine Verschiebung kann auch von neuen Gewohnheiten kommen (z. B. Heidelbeersträucher im Frühling kaufen). Bei zwanzig getesteten Wörtern können ein bis zwei den 95-%-Test zufällig bestehen."],
-  foot: (d, b) => `Daten: Google Trends, Region Schweiz, abgerufen am ${d}. Analyse: Matthias Häni, ${b}.`},
+  foot: (d, b) => `Daten: Google Trends, Region Schweiz, abgerufen am ${d}. Analyse: Matthias Häni, ${b}. Code mit Hilfe von Claude (Anthropic) geschrieben.`},
 
 fr: {title: "L’horloge nature de la Suisse",
   lede: n => `Quand la Suisse se tourne-t-elle vers la nature ? ${n} mots, recherchés en allemand, français, italien, rythment l’année suisse : de l’ail des ours en mars aux châtaignes en octobre, avec des morilles pour Noël. Le loup est recherché toute l’année.`,
@@ -177,7 +177,7 @@ fr: {title: "L’horloge nature de la Suisse",
        "<b>Cycle annuel.</b> Moyenne de chaque semaine civile sur cinq ans, lissée sur trois semaines. Pic = semaine la plus haute. Saison = semaines au-dessus de la moitié du pic. Rythme annuel = (plus haut − plus bas) / plus haut.",
        "<b>Décalage.</b> Pour chaque année : la date moyenne pondérée par les recherches sur les mois de la saison (mois au-dessus de la moitié du pic, plus un de chaque côté). Tendance : pente de Theil-Sen avec son intervalle à 95 %. Une année ne compte que si chaque mois de la saison a des recherches mesurables ; une tendance demande dix années de ce type. Les mots avec un pic en décembre ou janvier, ou sans saison claire, sont écartés.",
        "<b>Limites.</b> Les recherches mesurent l’attention, pas la nature elle-même. L’actualité peut créer des pics. Google a modifié sa collecte de données en 2011, 2016, 2022. Les pas mensuels rendent le décalage grossier : quelques jours par décennie sont à la limite de ce que les données peuvent montrer. Un décalage peut aussi venir de nouvelles habitudes (p. ex. acheter des myrtilliers au printemps). Avec vingt mots testés, un ou deux peuvent passer le test à 95 % par hasard."],
-  foot: (d, b) => `Données : Google Trends, région Suisse, extraites le ${d}. Analyse : Matthias Häni, ${b}.`},
+  foot: (d, b) => `Données : Google Trends, région Suisse, extraites le ${d}. Analyse : Matthias Häni, ${b}. Code écrit avec l’aide de Claude (Anthropic).`},
 
 it: {title: "L’orologio della natura svizzero",
   lede: n => `Quando la Svizzera si rivolge alla natura? ${n} parole, cercate in tedesco, francese, italiano, scandiscono l’anno svizzero: dall’aglio orsino a marzo alle castagne in ottobre, con le spugnole per Natale. Il lupo è cercato tutto l’anno.`,
@@ -205,7 +205,7 @@ it: {title: "L’orologio della natura svizzero",
        "<b>Ciclo annuale.</b> Media di ogni settimana del calendario su cinque anni, livellata su tre settimane. Picco = settimana più alta. Stagione = settimane sopra la metà del picco. Ritmo annuale = (valore più alto − più basso) / più alto.",
        "<b>Spostamento.</b> Per ogni anno: la data media ponderata per le ricerche sui mesi della stagione (mesi sopra la metà del picco più uno per lato). Tendenza: pendenza di Theil-Sen con intervallo al 95 %. Un anno conta solo se ogni mese della stagione ha ricerche misurabili; una tendenza richiede dieci anni di questo tipo. Le parole con picco a dicembre o gennaio, o senza una stagione chiara, sono escluse.",
        "<b>Limiti.</b> Le ricerche misurano l’attenzione, non la natura stessa. Le notizie possono creare picchi. Google ha cambiato la raccolta dei dati nel 2011, 2016, 2022. I passi mensili rendono lo spostamento grossolano: pochi giorni per decennio sono al limite di ciò che i dati possono mostrare. Uno spostamento può venire anche da nuove abitudini (p. es. comprare piante di mirtillo in primavera). Con venti parole testate, una o due possono superare il test al 95 % per caso."],
-  foot: (d, b) => `Dati: Google Trends, regione Svizzera, estratti il ${d}. Analisi: Matthias Häni, ${b}.`}
+  foot: (d, b) => `Dati: Google Trends, regione Svizzera, estratti il ${d}. Analisi: Matthias Häni, ${b}. Codice scritto con l’aiuto di Claude (Anthropic).`}
 };
 
 /* display names per language; missing ones fall back to the search terms */
